@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-image: image-url('orange_background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.center {
+  padding: 10% 0;
+}
+
+.container {
+  padding: 5% 0;
+}
