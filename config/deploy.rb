@@ -1,3 +1,4 @@
+require 'bundler/capistrano' # for bundler support
 set :application, "william-codes"
 set :repository,  "git@github.com:williamcodes/william-codes.git"
 
