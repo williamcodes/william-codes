@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'capistrano', '2.15.5'
+gem 'librarian-chef'
 gem 'pry-nav'
 gem 'prawn'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

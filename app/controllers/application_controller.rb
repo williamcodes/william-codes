@@ -5,4 +5,14 @@ class ApplicationController < ActionController::Base
 
   def for_etsy
   end
+
+  def download_pdf
+    writer = PdfWriter.new
+    file = writer.generate_pdf
+    filename = writer.filename
+    type = writer.content_type
+
+    send_data(file, filename: filename, type: type)
+  end
+
 end
