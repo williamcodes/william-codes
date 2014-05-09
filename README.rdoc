@@ -1,3 +1,5 @@
+[ ![Codeship Status for repository/name](https://www.codeship.io/projects/309e1a00-b958-0131-f602-463fdc5acd96/status)](https://www.codeship.io/projects/309e1a00-b958-0131-f602-463fdc5acd96/status)
+
 == README
 
 This README would normally document whatever steps are necessary to get the
