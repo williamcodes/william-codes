@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rspec-rails', group: [:development, :test]
 gem 'capistrano', '2.15.5'
 gem 'pry-nav'
 gem 'prawn'
