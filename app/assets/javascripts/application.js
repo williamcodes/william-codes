@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require bootstrap.min
+//= require hoverIntent
+//= require lightbox-2.6.min
+//= require idangerous.swiper-2.1.min
+//= require jquery.mixitup.min
+//= require waypoints.min
+//= require jquery.scrollTo
+//= require jquery.nav
+//= require scripts
+
