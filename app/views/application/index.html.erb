@@ -1,3 +1,489 @@
-<!-- <div class="container"> -->
-<!-- </div> -->
-<%= image_tag('coming_soon.jpg') %>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+      <title>CityStrap</title>
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="dist/js/html5shiv.js"></script>
+      <script src="dist/js/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body data-spy="scroll" data-target="#navigation">
+      <div id="mobile-slider" class="visible-xs">
+         <p><%= image_tag 'logo-wht-mobile@2x.png', alt: 'logo-wht-mobile' %><span class="nav-icon"><i class="fa fa-bars"></i></span></p>
+      </div>
+      <!-- ============================== HEADER/NAV =========================== -->
+      <header>
+         <div class="container">
+         <div class="row">
+         <div class="col-lg-4 col-md-2 col-sm-2 hidden-xs">
+            <h1 id="logo" class="text-hide">CityStrap</h1>
+         </div>
+         <!-- end 4 -->
+         <div class="col-lg-8 col-md-10 col-sm-12">
+            <nav id="navigation" class="navbar navbar-right" role="navigation">
+               <ul class="nav navbar-nav">
+                  <li class="active"><a href="#home" title="Home">Home</a></li>
+                  <li class="dropdown">
+                     <a href="#about-us" class="dropdown-toggle" data-toggle="dropdown" title="#">About</a>
+                     <ul class="dropdown-menu sub-nav hidden-xs">
+                        <li><a href="#" title="#" class="external"><i class="fa fa-external-link"></i> Another link</a></li>
+                        <li><a href="#" title="#" class="external"><i class="fa fa-external-link"></i> Another link</a></li>
+                        <li><a href="#" title="#"><i class="fa fa-chevron-right"></i> Example link</a></li>
+                        <li><a href="#" title="#"><i class="fa fa-chevron-right"></i> Example link</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="#gallery" title="#">Portfolio</a></li>
+                  <li><a href="#posts" title="Blog">Blog</a></li>
+                  <li><a href="#contact" title="Contact">Contact</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <!-- ============================== CAROUSEL=========================== -->
+      <div id="main-page">
+         <div id="home" class="home-carousel hidden-xs">
+            <div id="myCarousel" class="carousel slide">
+               <!-- Indicators -->
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="item active">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <h1>Example Heading One</h1>
+                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                           <p><a class="btn btn-large btn-primary" href="#">See the video</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <h1>Another example headline.</h1>
+                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <h1>One more for good measure.</h1>
+                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+               <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+            <!-- carousel -->
+         </div>
+         <!-- end home -->
+         <!-- ============================= ABOUT US ============================= -->
+         <div id="about-wrap">
+            <div class="container text-center" id="about-us">
+               <div class="row">
+                  <div class="col-lg-10 col-lg-offset-1">
+                     <h1>About Us</h1>
+                     <p id="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                  </div>
+                  <!-- end 12 -->
+               </div>
+               <!-- end row -->
+               <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                     <div class="team">
+                        <%= image_tag 'teamMember.jpg', class: 'img-responsive', alt: 'paul' %>
+                        <div class="roll">
+                           <div class="sn-links">
+                              <a href="#" title="#"><i class="fa fa-facebook-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-twitter-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-linkedin-square"></i></a><br>
+                              <a href="#" title="#"><i class="fa fa-youtube-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-flickr"></i></a>
+                              <a href="#" title="#"><i class="fa fa-instagram"></i></a>
+                           </div>
+                           <!-- end sn links -->
+                        </div>
+                        <!-- end roll -->
+                     </div>
+                     <h2>Chris</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                     </p>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                     <div class="team">
+                        <%= image_tag 'teamMember.jpg', class: 'img-responsive', alt: 'paul' %>
+                        <div class="roll">
+                           <div class="sn-links">
+                              <a href="#" title="#"><i class="fa fa-facebook-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-twitter-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-linkedin-square"></i></a><br>
+                              <a href="#" title="#"><i class="fa fa-youtube-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-flickr"></i></a>
+                              <a href="#" title="#"><i class="fa fa-instagram"></i></a>
+                           </div>
+                           <!-- end sn links -->
+                        </div>
+                        <!-- end roll -->
+                     </div>
+                     <h2>Joanne</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                     </p>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                     <div class="team">
+                        <%= image_tag 'teamMember.jpg', class: 'img-responsive', alt: 'paul' %>
+                        <div class="roll">
+                           <div class="sn-links">
+                              <a href="#" title="#"><i class="fa fa-facebook-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-twitter-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-linkedin-square"></i></a><br>
+                              <a href="#" title="#"><i class="fa fa-youtube-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-flickr"></i></a>
+                              <a href="#" title="#"><i class="fa fa-instagram"></i></a>
+                           </div>
+                           <!-- end sn links -->
+                        </div>
+                        <!-- end roll -->
+                     </div>
+                     <h2>Rob</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                     </p>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                     <div class="team">
+                        <%= image_tag 'teamMember.jpg', class: 'img-responsive', alt: 'paul' %>
+                        <div class="roll">
+                           <div class="sn-links">
+                              <a href="#" title="#"><i class="fa fa-facebook-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-twitter-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-linkedin-square"></i></a><br>
+                              <a href="#" title="#"><i class="fa fa-youtube-square"></i></a>
+                              <a href="#" title="#"><i class="fa fa-flickr"></i></a>
+                              <a href="#" title="#"><i class="fa fa-instagram"></i></a>
+                           </div>
+                           <!-- end sn links -->
+                        </div>
+                        <!-- end roll -->
+                     </div>
+                     <h2>Noon</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                     </p>
+                  </div>
+               </div>
+               <!-- end row -->
+            </div>
+            <!-- end container -->
+         </div>
+         <!-- end about wrapp -->
+         <!-- ============================= GALLERY ============================= -->
+         <div class="container" id="gallery">
+            <div class="row">
+               <div id="about" class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 text-center">
+                  <h1>Portfolio</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               </div>
+               <!-- end 12 -->
+            </div>
+            <!-- end row -->
+         </div>
+         <!-- end container -->
+         <div id="logos-wrapper">
+            <ul class="portfolioFilter">
+               <li class="filter btn" data-filter="all">Show All</li>
+               <li class="filter btn" data-filter="web">Web</li>
+               <li class="filter btn" data-filter="logos">logos</li>
+               <li class="filter btn" data-filter="print">print</li>
+               <li class="filter btn" data-filter="illustration">Illustration</li>
+            </ul>
+            <div id="Grid">
+               <!-- item -->
+               <div class="gal-item mix web">
+                  <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                  <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="image" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+               </div>
+               <!-- item -->
+               <div class="gal-item mix logos">
+                  <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                  <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="image" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+               </div>
+               <!-- item -->
+               <div class="gal-item mix print">
+                  <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                  <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="image" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+               </div>
+               <!-- item -->
+               <div class="gal-item mix web">
+                  <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                  <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="image" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+               </div>
+               <!-- item -->
+               <div class="gal-item mix logos">
+                  <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                  <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="image" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+               </div>
+               <!-- item -->
+               <div class="gal-item mix print">
+                  <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                  <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="image" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+               </div>
+               <!-- item -->
+               <div class="gal-item mix web">
+                  <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                  <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="image" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+               </div>
+               <!-- item -->
+               <div class="gal-item mix logos">
+                  <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                  <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="image" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+               </div>
+               <!-- item -->
+               <div class="gal-item mix print">
+                  <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                  <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="image" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+               </div>
+            </div>
+            <!-- end grid -->
+         </div>
+         <!-- end logos wrapper -->
+         <!-- ========================= RECENT EXHIBITIONS ========================== -->
+         <div  id="posts">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-10 col-lg-offset-1 text-center">
+                     <h1>Recent Posts</h1>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  </div>
+                  <!-- end 12 -->
+               </div>
+               <!-- end row -->
+               <div class="row">
+                  <!-- item -->
+                  <div class="item col-lg-4 col-md-4 col-sm-4">
+                     <div class="item_wrap">
+                        <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                        <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="exhibition" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+                     </div>
+                     <h2>Post Title</h2>
+                     <p class="meta">6th December 2013</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="read more">Read more</a></p>
+                  </div>
+                  <!-- item -->
+                  <div class="item col-lg-4 col-md-4 col-sm-4">
+                     <div class="item_wrap">
+                        <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                        <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="exhibition" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+                     </div>
+                     <h2>Post Title</h2>
+                     <p class="meta">6th December 2013</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="read more">Read more</a></p>
+                  </div>
+                  <!-- item -->
+                  <div class="item col-lg-4 col-md-4 col-sm-4">
+                     <div class="item_wrap">
+                        <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                        <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="exhibition" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+                     </div>
+                     <h2>Post Title</h2>
+                     <p class="meta">6th December 2013</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="read more">Read more</a></p>
+                  </div>
+               </div>
+               <!-- end row -->
+               <div class="row">
+                  <!-- item -->
+                  <div class="item col-lg-4 col-md-4 col-sm-4">
+                     <div class="item_wrap">
+                        <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                        <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="exhibition" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+                     </div>
+                     <h2>Post Title</h2>
+                     <p class="meta">6th December 2013</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="read more">Read more</a></p>
+                  </div>
+                  <!-- item -->
+                  <div class="item col-lg-4 col-md-4 col-sm-4">
+                     <div class="item_wrap">
+                        <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                        <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="exhibition" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+                     </div>
+                     <h2>Post Title</h2>
+                     <p class="meta">6th December 2013</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="read more">Read more</a></p>
+                  </div>
+                  <!-- item -->
+                  <div class="item col-lg-4 col-md-4 col-sm-4">
+                     <div class="item_wrap">
+                        <%= image_tag 'placeholder.jpg', class: 'img-responsive', alt: '#' %>
+                        <div class="select"><a href="images/placeholderLrg.jpg" data-lightbox="exhibition" title="pic details go here"><i class="fa fa-search-plus"></i></a></div>
+                     </div>
+                     <h2>Post Title</h2>
+                     <p class="meta">6th December 2013</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="read more">Read more</a></p>
+                  </div>
+               </div>
+               <!-- end row -->
+            </div>
+            <!-- END CONTAINER -->
+         </div>
+         <!-- end posts -->
+         <!-- ========================== PARRALAX ============================= -->
+         <div class="backgr hidden-xs">
+            <div id="myCarousel2" class="carousel slide">
+               <!-- Indicators -->
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel2" data-slide-to="1"></li>
+                  <li data-target="#myCarousel2" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="item active">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <%= image_tag 'thumb.jpg', class: 'img-responsive', alt: 'thumbnail' %>
+                           <h2>Example Heading One</h2>
+                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <%= image_tag 'thumb.jpg', class: 'img-responsive', alt: 'thumbnail' %>
+                           <h2>Another example headline.</h2>
+                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <%= image_tag 'thumb.jpg', class: 'img-responsive', alt: 'thumbnail' %>
+                           <h2>One more for good measure.</h2>
+                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="left carousel-control" href="#myCarousel2" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+               <a class="right carousel-control" href="#myCarousel2" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+            <!-- /.carousel -->
+         </div>
+         <!-- ============================= CONTACT ============================= -->
+         <div class="image-lrg text-center" id="contact">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-10 col-lg-offset-1">
+                     <h1>Contact Us</h1>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Excepteur sint occaecat cupidatat</p>
+                  </div>
+               </div>
+               <!-- end row -->
+               <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <form role="form">
+                        <p><input class="form-control" placeholder="Enter name"></p>
+                        <p><input class="form-control" placeholder="Enter email"></p>
+                        <p><textarea class="form-control" rows="6"></textarea></p>
+                        <p><button type="submit" class="submit btn btn-db">SEND NOW</button></p>
+                     </form>
+                  </div>
+                  <!-- end 8 -->
+               </div>
+               <!-- end row -->
+            </div>
+            <!-- end container -->
+            <!-- <div class="map">
+				 <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Silom+Bangkok+Thailand&amp;aq=0&amp;oq=silom+bangkok&amp;sll=13.746815,100.53503&amp;sspn=0.07245,0.088921&amp;ie=UTF8&amp;hq=&amp;hnear=Silom+Rd,+Krungthep+Mahanakorn+10500,+Thailand&amp;ll=13.725912,100.526783&amp;spn=0.009057,0.011115&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+            </div> -->
+         </div>
+         <!-- end contact -->
+         <!-- ============================= FOOTER ============================== -->
+         <footer>
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                     <h3>Sign up for the newsletter</h3>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-lg-7 col-md-7 col-sm-7">
+                     <form class="form-inline" role="form">
+                        <div class="email form-group col-lg-8 col-sm-8">
+                           <input class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4">
+                           <button type="submit" style="width:100%;" class="submit btn btn-db">SIGN UP</button>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right">
+                     <p class="sn-links">
+                        <a href="#" title="#"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#" title="#"><i class="fa fa-twitter-square"></i></a>
+                        <a href="#" title="#"><i class="fa fa-linkedin-square"></i></a>
+                        <a href="#" title="#"><i class="fa fa-youtube-square"></i></a>
+                        <a href="#" title="#"><i class="fa fa-flickr"></i></a>
+                        <a href="#" title="#"><i class="fa fa-instagram"></i></a>
+                     </p>
+                  </div>
+               </div>
+               <!-- end row -->
+            </div>
+            <!-- end container -->
+         </footer>
+      </div>
+      <!-- ========================== SWIPER GALLERY ============================= -->
+      <div class="swiper">
+         <div class="swiper-container">
+            <div class="swiper-wrapper">
+               <!--First Slide-->
+               <div class="swiper-slide">
+                  <%= image_tag 'slide.jpg', class: 'img-responsive', alt: '1' %>
+               </div>
+               <!--Second Slide-->
+               <div class="swiper-slide">
+                  <%= image_tag 'slide.jpg', class: 'img-responsive', alt: '2' %>
+               </div>
+               <!--Third Slide-->
+               <div class="swiper-slide">
+                  <%= image_tag 'slide.jpg', class: 'img-responsive', alt: '3' %>
+               </div>
+               <!--Fourth Slide-->
+               <div class="swiper-slide">
+                  <%= image_tag 'slide.jpg', class: 'img-responsive', alt: '4' %>
+               </div>
+            </div>
+            <!-- end slider wrapper -->
+         </div>
+         <!-- end swiper container -->
+      </div>
+      <!-- end swiper --><!-- ============================= SCRIPTS ============================== -->
+      <!-- <script src="dist/js/jquery.js"></script>
+      <script src="dist/js/bootstrap.min.js"></script>
+      <script src="js/hoverIntent.js"></script>
+      <script src="js/holder.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/retina-1.1.0.min.js"></script>
+      <script src="js/lightbox-2.6.min.js"></script>
+      <script src="js/idangerous.swiper-2.1.min.js"></script>
+      <script src="js/jquery.mixitup.min.js"></script>
+      <script src="js/waypoints.min.js"></script>
+      <script src="js/swfobject.js"></script>
+      <script src="js/jquery.scrollTo.js"></script>
+      <script src="js/jquery.nav.js"></script> -->
+   </body>
+</html>
