@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'neography'
 gem 'font-awesome-rails'
 gem 'rspec-rails', group: [:development, :test]
 gem 'capistrano', '2.15.5'
