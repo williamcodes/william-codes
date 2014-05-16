@@ -1,9 +1,16 @@
 <h2><%= @bacon_finder.actor.name %></h2>
 <ul>
+  <% counter = 0 %>
+  <% @path.each do |node| %>
+    <% if counter % 2 == 0 %>
+      <li>
+        <%= node.name %>
+        <%= image_tag node.image %>
+    <% else %>
+        <%= node.name %>
+        <%= image_tag node.image %>
+      </li>
+    <% end %>
+    <% counter += 1 %>
+  <% end %>
 </ul>
-<% @path.each do |node| %>
-  <li>
-    <h4><%= node.name %></h4>
-    <p><%= image_tag node.image %></p>
-  </li>
-<% end %>
