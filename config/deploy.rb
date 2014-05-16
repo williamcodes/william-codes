@@ -50,6 +50,6 @@ namespace :db do
   end
 end
 
-# before "deploy:finalize_update", "deploy:symlink_keys"
+before "deploy:finalize_update", "deploy:symlink_keys"
 # before "deploy:restart", "db:migrate"
 
