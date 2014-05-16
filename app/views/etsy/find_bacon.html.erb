@@ -1,0 +1,9 @@
+<h2><%= @bacon_finder.actor.name %></h2>
+<ul>
+</ul>
+<% @path.each do |node| %>
+  <li>
+    <h4><%= node.name %></h4>
+    <p><%= image_tag node.image %></p>
+  </li>
+<% end %>
