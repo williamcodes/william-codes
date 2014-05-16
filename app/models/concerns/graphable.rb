@@ -12,7 +12,4 @@ module Graphable
       end
     end
   end
-  
-  module InstanceMethods
-  end
 end
