@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'whenever'
 gem 'neography'
 gem 'font-awesome-rails'
 gem 'rspec-rails', group: [:development, :test]
