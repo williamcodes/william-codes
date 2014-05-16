@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'twitter'
 gem 'whenever'
 gem 'neography'
 gem 'font-awesome-rails'
