@@ -17,7 +17,8 @@ class BaconFinder
       traveled_path << current_node
       return true if current_node.bacon?
 
-      current_node.neighbors.each do |neighbor|
+      node_neighbors = current_node.neighbors
+      node_neighbors.each do |neighbor|
         self.node_queue << neighbor unless visited_nodes[neighbor]
       end
     end
