@@ -1,3 +1,43 @@
 // Place all the styles related to the etsy controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.custom-search-form {
+  margin-top:75px;
+}
+
+.centered-form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bacon-form {
+  width: 400px;
+  .form-control {
+    width: 65%;
+    float: left;
+    padding: 19px 10px;
+  }
+  
+  .btn {
+    width: 35%;
+    float: left;
+  }
+}
+
+.path {
+  margin: 10px;
+  padding: 10px;
+  background-color: #eee;
+  height: 400px;
+}
+
+.path li {
+  float: left;
+  height: 100px;
+}
+
+.node p {
+  margin-right: auto;
+  margin-left: auto;
+}
