@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'elasticsearch-rails'
 gem 'twitter'
 gem 'whenever'
 gem 'neography'
