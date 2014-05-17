@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515150212) do
+ActiveRecord::Schema.define(version: 20140517012404) do
 
   create_table "actor_films", id: false, force: true do |t|
     t.integer "actor_id", null: false
@@ -25,11 +25,15 @@ ActiveRecord::Schema.define(version: 20140515150212) do
     t.datetime "updated_at"
   end
 
+  add_index "actors", ["name"], name: "index_actors_on_name"
+
   create_table "films", force: true do |t|
     t.string   "name"
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "films", ["name"], name: "index_films_on_name"
 
 end
