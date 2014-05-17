@@ -1,5 +1,20 @@
-<%= form_tag :action => 'find_bacon', :method => 'post' do %>
-  
-  Actor Name: <%= text_field_tag :name %>
-  <%= submit_tag("Get Degrees to Kevin Bacon!") %>
-<% end -%>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-3">
+      <div class="input-group custom-search-form centered-form">
+        <%= form_tag({:action => 'find_bacon'},{ :method => 'post', :class => "bacon-form", :remote => true}) do %>
+          
+          <%= text_field_tag( :name, "", class: "form-control", placeholder:"actor name" )%>
+          <%= submit_tag("Bacon Degrees", class: "btn btn-default" ) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+      <div id="results"></div>
+    </div>
+  </div>
+</div>
