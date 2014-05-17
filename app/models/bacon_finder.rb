@@ -39,4 +39,8 @@ class BaconFinder
   def pretty_path
     short_path.map(&:name).join(" => ")
   end
+
+  def to_partial_path
+    "bacon_finder"
+  end
 end
