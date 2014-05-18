@@ -4,5 +4,6 @@ class Actor < ActiveRecord::Base
 
   extend Graphable::ClassMethods
   neighbor :films
+  searchkick autocomplete: ['name']
 
 end
