@@ -10,6 +10,10 @@ module Graphable
       define_method :bacon? do 
         name == "Kevin Bacon"
       end
+
+      define_method :neighbor_table do
+        relation
+      end
     end
   end
 end
