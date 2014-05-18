@@ -1,14 +1,18 @@
 source 'https://rubygems.org'
 
-gem 'elasticsearch-rails'
+gem 'searchkick'
 gem 'twitter'
 gem 'whenever'
 gem 'neography'
 gem 'font-awesome-rails'
-gem 'rspec-rails', group: [:development, :test]
 gem 'capistrano', '2.15.5'
 gem 'pry-nav'
 gem 'prawn'
+group :development, :test do 
+  gem 'rspec-rails'
+  gem 'capybara'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0.rc2'
 # Use sqlite3 as the database for Active Record
