@@ -6,11 +6,12 @@ gem 'whenever'
 gem 'neography'
 gem 'font-awesome-rails'
 gem 'capistrano', '2.15.5'
-gem 'pry-nav'
 gem 'prawn'
 group :development, :test do 
+  gem 'pry-nav'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
