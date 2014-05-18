@@ -11,7 +11,7 @@
   .form-control {
     width: 65%;
     float: left;
-    padding: 19px 10px;
+    padding: 18px 10px;
   }
   
   .btn {
@@ -97,5 +97,5 @@
 }
 
 div form span.twitter-typeahead {
-  display: inline;
+  display: inline !important;
 }
