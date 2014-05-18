@@ -40,6 +40,7 @@ namespace :deploy do
 
   task :symlink_keys, :roles => :app do
     run "ln -nfs /home/#{user}/#{application}/shared/application.yml #{release_path}/config/application.yml"
+    run "ln -nfs /home/#{user}/#{application}/shared/production.sqlite3 #{release_path}/db/production.sqlite3"
   end
 end
 
