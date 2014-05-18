@@ -32,13 +32,14 @@
   height: 100%;
 }
 
-.path li {
-  float: left;
-  height: 100px;
+.path p {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .node {
-  padding: 10px;
+  padding-bottom: 10px;
   margin-right: auto;
   margin-left: auto;
 }
