@@ -1,8 +1,9 @@
 <div class="path jumbotron">
-  <% @path.each do |node| %>
-    <div class='col-xs-3 node'>
+  <div class="col-xs-4"></div>
+  <div class='col-xs-3 node'>
+    <% @path.each do |node| %>
       <p><%= node.name %></p>
       <%= image_tag node.image %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
