@@ -13,13 +13,13 @@ class BaconFinder
 
     until node_queue.empty?
       current_node = node_queue.shift
-      visited_nodes[current_node] = true
       traveled_path << current_node
       return true if current_node.bacon?
 
       node_neighbors = current_node.neighbors
       node_neighbors.each do |neighbor|
-        self.node_queue << neighbor unless visited_nodes[neighbor]
+        self.node_queue << neighbor unless visited_nodes[neighbor.name]
+        visited_nodes[current_node.name] = true
       end
     end
 
