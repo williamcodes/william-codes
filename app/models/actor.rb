@@ -6,4 +6,8 @@ class Actor < ActiveRecord::Base
   neighbor :films
   searchkick autocomplete: ['name']
 
+  def text
+    "with #{name}"
+  end
+
 end

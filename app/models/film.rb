@@ -5,4 +5,7 @@ class Film < ActiveRecord::Base
   extend Graphable::ClassMethods
   neighbor :actors
 
+  def text
+    "who was in #{name}"
+  end
 end
