@@ -1,8 +1,9 @@
 <div class="path jumbotron">
   <div class="col-xs-4"></div>
   <div class='col-xs-3 node'>
+  <p>You chose to search</p>
     <% @path.each do |node| %>
-      <p><%= node.name %></p>
+      <p><%= node.text %></p>
       <%= image_tag node.image %>
     <% end %>
   </div>
