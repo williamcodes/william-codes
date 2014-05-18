@@ -1,19 +1,19 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-4"></div>
-    <div class="col-lg-3">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-3">
       <div class="input-group custom-search-form centered-form">
         <%= form_tag({:action => 'find_bacon'},{ :method => 'post', :class => "bacon-form", :remote => true}) do %>
           
-          <%= text_field_tag( :name, "", class: "form-control", placeholder:"actor name" )%>
+          <%= text_field_tag( :name, "", class: "form-control", id: "actor_search", placeholder:"actor name", autofocus: "autofocus" )%>
           <%= submit_tag("Bacon Degrees", class: "btn btn-default" ) %>
         <% end %>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
       <div id="results"></div>
     </div>
   </div>
