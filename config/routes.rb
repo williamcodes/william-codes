@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
     get '/for_etsy' => 'etsy#for_etsy'
+    get '/etsy/actors' => 'etsy#actors'
+    get '/etsy/autocomplete' => 'etsy#autocomplete'
+    post '/etsy/import' => 'etsy#import'
     post '/find_bacon' => 'etsy#find_bacon'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
