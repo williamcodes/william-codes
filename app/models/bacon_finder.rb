@@ -1,5 +1,6 @@
 class BaconFinder
-  attr_accessor :actor, :traveled_path, :visited_nodes, :node_queue, :current_node, :solution_path
+  attr_accessor :actor, :traveled_path, :visited_nodes, :node_queue,
+                :current_node, :solution_path
 
   def initialize(actor)
     @actor = actor
