@@ -1,5 +1,5 @@
 class EtsyController < ApplicationController
-  include EtsyHelper
+  include EtsyHelper::InstanceMethods
 
   def for_etsy
   end
@@ -14,7 +14,8 @@ class EtsyController < ApplicationController
 
   def neo_find_bacon
     @graph_maker = GraphMaker.new
-    @path = @graph_maker.bacon_path(bacon_params[:name])
+    actor_name = proper_case bacon_params[:name]
+    @path = @graph_maker.bacon_path(actor_name)
   end
 
   def actors
