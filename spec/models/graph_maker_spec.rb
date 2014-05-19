@@ -1,20 +1,19 @@
 require 'spec_helper'
 
 describe GraphMaker do
+  let(:kevin_bacon) { Actor.find_by(name: "Kevin Bacon") }
+  let(:brad_pitt) { Actor.find_by(name: "Brad Pitt") }
+
   context '#bacon_path' do
-    it "finds the path to kevin bacon" do
-      kevin_bacon = Actor.find_by(name: "Kevin Bacon")
-      brad_pitt = Actor.find_by(name: "Brad Pitt")
+    it "finds the path to Kevin Bacon" do
       path = subject.bacon_path("Brad Pitt")
       expect(path).to include(kevin_bacon)
       expect(path).to include(brad_pitt)
     end
-  end
 
-  context '#proper_case' do
-    it "proper cases a name" do
-      actor_name = "kEvIn BaCoN"
-      expect(subject.proper_case(actor_name)).to eq "Kevin Bacon"
+    it "returns nil if it cannot find Kevin Bacon" do
+      path = subject.bacon_path("Fake Actor")
+      expect(path).to be_nil
     end
   end
 

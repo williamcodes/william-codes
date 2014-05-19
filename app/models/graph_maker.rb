@@ -23,15 +23,15 @@ class GraphMaker
   end
 
   def bacon_path(actor_name)
-    actor_node = Neography::Node.find("actors", "name", actor_name).first
+    actor_node = Neography::Node.find("actors", "name", actor_name)
+    return nil if actor_node.nil?
+
     kevin_bacon = Neography::Node.find("actors", "name", "Kevin Bacon").first
-    bacon_path = actor_node.shortest_path_to(kevin_bacon).incoming(:friends).depth(6).nodes.first
-    if bacon_path.nil?
-      return nil
-    else
-      return bacon_path.map do |node|
-        Actor.find_by(name: node.name) || Film.find_by(name: node.name)
-      end
+    bacon_path = actor_node.first.shortest_path_to(kevin_bacon).incoming(:friends).depth(6).nodes
+    
+    return nil if bacon_path.nil?
+    bacon_path.first.map do |node|
+      Actor.find_by(name: node.name) || Film.find_by(name: node.name)
     end
   end
 

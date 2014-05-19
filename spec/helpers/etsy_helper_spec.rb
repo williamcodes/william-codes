@@ -10,5 +10,11 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe EtsyHelper do
+describe EtsyHelper::InstanceMethods do
+  context '#proper_case' do
+    it "proper cases a name" do
+      actor_name = proper_case("kEvIn BaCoN")
+      expect(actor_name).to eq "Kevin Bacon"
+    end
+  end
 end
