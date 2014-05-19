@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe Graphable do
 
   context '#neighbors' do
