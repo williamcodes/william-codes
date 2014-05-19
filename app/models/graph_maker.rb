@@ -9,41 +9,6 @@ class GraphMaker
     find_node(Actor.kevin_bacon)
   end
 
-  def delete_graph
-    counter = 0
-    max = Film.count
-    
-    Film.all.each do |film|
-      film_node = find_or_create_node(film)
-      film_node.del
-
-      film.actors.each do |actor|
-        actor_node = find_or_create_node(actor)
-        actor_node.del
-      end
-    
-      counter += 1
-      puts "#{counter} of #{max}"
-    end
-  end
-
-  def create_graph
-    counter = 0
-    max = Film.count
-    
-    Film.all.each do |film|
-      film_node = find_or_create_node(film)
-    
-      film.actors.each do |actor|
-        actor_node = find_or_create_node(actor)
-        film_node.both(:friends) << actor_node
-      end
-    
-      counter += 1
-      puts "#{counter} of #{max}"
-    end
-  end
-
   def bacon_path(actor)
     actor_node = find_node(actor)
     return nil if actor_node.nil?
