@@ -11,6 +11,10 @@ module Graphable
         name == "Kevin Bacon"
       end
 
+      define_method :table do 
+        "#{self.class.to_s.downcase}s"
+      end
+
       define_method :neighbor_table do
         relation
       end
