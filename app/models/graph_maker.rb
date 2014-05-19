@@ -6,7 +6,7 @@ class GraphMaker
   end
 
   def create_graph
-    counter = 1
+    counter = 0
     max = Film.count
     
     Film.all.each do |film|
