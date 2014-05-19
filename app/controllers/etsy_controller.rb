@@ -12,6 +12,11 @@ class EtsyController < ApplicationController
     @path = @bacon_finder.short_path
   end
 
+  def neo_find_bacon
+    @graph_maker = GraphMaker.new
+    @path = @graph_maker.bacon_path(bacon_params[:name])
+  end
+
   def actors
     if params[:query].present?
       @actors = Actor.search(params[:query], page: params[:page])
