@@ -52,7 +52,7 @@ class GraphMaker
   end
   
   def find_node(object)
-    Neography::Node.find(object.table, "name", object.name).first
+    Neography::Node.find(object.table, "name", object.name).try(:first)
   end
 
   def to_partial_path
