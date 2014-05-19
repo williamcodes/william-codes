@@ -9,24 +9,6 @@ class GraphMaker
     find_node(Actor.kevin_bacon)
   end
 
-  def prune_graph
-    counter = 0
-    max = Film.count
-    
-    Film.all.each do |film|
-      film_node = find_or_create_node(film)
-      prune film_node
-
-      film.actors.each do |actor|
-        actor_node = find_or_create_node(actor)
-        prune actor_node
-      end
-    
-      counter += 1
-      puts "#{counter} of #{max}"
-    end
-  end
-
   def delete_graph
     counter = 0
     max = Film.count
@@ -42,13 +24,6 @@ class GraphMaker
     
       counter += 1
       puts "#{counter} of #{max}"
-    end
-  end
-
-  def prune(node)
-    if node.class == Array
-      node.pop
-      node.each(&:del)
     end
   end
 
@@ -73,7 +48,8 @@ class GraphMaker
     actor_node = find_node(actor)
     return nil if actor_node.nil?
 
-    bacon_path = actor_node.shortest_path_to(kevin_bacon_node).incoming(:friends).depth(6).nodes.first
+    bacon_path = actor_node.shortest_path_to(kevin_bacon_node).
+                 incoming(:friends).depth(6).nodes.first
     
     return nil if bacon_path.nil?
       
