@@ -6,7 +6,10 @@ gem 'whenever'
 gem 'neography'
 gem 'font-awesome-rails'
 gem 'capistrano', '2.15.5'
-gem 'prawn'
+
+gem 'simplecov', :require => false, :group => :test
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 group :development, :test do 
   gem 'pry-nav'
   gem 'rspec-rails'
