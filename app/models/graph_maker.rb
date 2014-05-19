@@ -23,7 +23,7 @@ class GraphMaker
   end
 
   def bacon_path(actor_name)
-    actor_node = Neography::Node.find("actors", "name", actor_name).try(first)
+    actor_node = Neography::Node.find("actors", "name", actor_name).try(:first)
     return nil if actor_node.nil?
 
     kevin_bacon = Neography::Node.find("actors", "name", "Kevin Bacon").first
