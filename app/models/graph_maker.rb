@@ -5,6 +5,53 @@ class GraphMaker
     @neo = Neography::Rest.new  
   end
 
+  def kevin_bacon_node
+    find_node(Actor.kevin_bacon)
+  end
+
+  def prune_graph
+    counter = 0
+    max = Film.count
+    
+    Film.all.each do |film|
+      film_node = find_or_create_node(film)
+      prune film_node
+
+      film.actors.each do |actor|
+        actor_node = find_or_create_node(actor)
+        prune actor_node
+      end
+    
+      counter += 1
+      puts "#{counter} of #{max}"
+    end
+  end
+
+  def delete_graph
+    counter = 0
+    max = Film.count
+    
+    Film.all.each do |film|
+      film_node = find_or_create_node(film)
+      film_node.del
+
+      film.actors.each do |actor|
+        actor_node = find_or_create_node(actor)
+        actor_node.del
+      end
+    
+      counter += 1
+      puts "#{counter} of #{max}"
+    end
+  end
+
+  def prune(node)
+    if node.class == Array
+      node.pop
+      node.each(&:del)
+    end
+  end
+
   def create_graph
     counter = 0
     max = Film.count
@@ -22,14 +69,14 @@ class GraphMaker
     end
   end
 
-  def bacon_path(actor_name)
-    actor_node = Neography::Node.find("actors", "name", actor_name).try(:first)
+  def bacon_path(actor)
+    actor_node = find_node(actor)
     return nil if actor_node.nil?
 
-    kevin_bacon = Neography::Node.find("actors", "name", "Kevin Bacon").first
-    bacon_path = actor_node.first.shortest_path_to(kevin_bacon).incoming(:friends).depth(6).nodes
+    bacon_path = actor_node.shortest_path_to(kevin_bacon_node).incoming(:friends).depth(6).nodes.first
     
     return nil if bacon_path.nil?
+      
     bacon_path.map do |node|
       Actor.find_by(name: node.name) || Film.find_by(name: node.name)
     end
@@ -47,7 +94,7 @@ class GraphMaker
   end
   
   def find_node(object)
-    Neography::Node.find(object.table, "name", object.name).try(:first)
+    Neography::Node.find(object.table, "name", object.name)
   end
 
   def to_partial_path

@@ -14,8 +14,14 @@ class EtsyController < ApplicationController
 
   def neo_find_bacon
     @graph_maker = GraphMaker.new
-    actor_name = proper_case bacon_params[:name]
-    @path = @graph_maker.bacon_path(actor_name)
+    actor = Actor.find_by(name: proper_case(bacon_params[:name]))
+
+    if actor
+      @path = @graph_maker.bacon_path(actor)
+    else
+      @path = nil
+
+    end
   end
 
   def actors
