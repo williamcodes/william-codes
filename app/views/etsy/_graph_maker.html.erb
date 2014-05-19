@@ -1,0 +1,14 @@
+<div class="path jumbotron">
+  <div class="col-xs-4"></div>
+  <div class='col-xs-3 node'>
+  <% if @path %>
+    <p>You chose to search</p>
+    <% @path.each do |node| %>
+      <p><%= node.text %></p>
+      <%= image_tag node.image %>
+    <% end %>
+  <% else %>
+    <p>You win! We can't connect Kevin Bacon to that actor in 6 degrees or less!</p>
+  <% end %>
+  </div>
+</div>
