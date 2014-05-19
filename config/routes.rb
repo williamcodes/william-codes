@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get '/etsy/autocomplete' => 'etsy#autocomplete'
     post '/etsy/import' => 'etsy#import'
     post '/find_bacon' => 'etsy#find_bacon'
+    post '/neo_find_bacon' => 'etsy#neo_find_bacon'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
