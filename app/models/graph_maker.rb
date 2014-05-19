@@ -10,7 +10,7 @@ class GraphMaker
     max = Film.count
     
     Film.all.each do |film|
-      film_node = self.find_or_create_node(film)
+      film_node = find_or_create_node(film)
     
       film.actors.each do |actor|
         actor_node = find_or_create_node(actor)
@@ -23,6 +23,7 @@ class GraphMaker
   end
 
   def bacon_path(actor_name)
+    actor_name = proper_case(actor_name)
     actor_node = Neography::Node.find("actors", "name", actor_name).first
     kevin_bacon = Neography::Node.find("actors", "name", "Kevin Bacon").first
     bacon_path = actor_node.shortest_path_to(kevin_bacon).incoming(:friends).depth(6).nodes.first
@@ -33,6 +34,10 @@ class GraphMaker
         Actor.find_by(name: node.name) || Film.find_by(name: node.name)
       end
     end
+  end
+
+  def proper_case(name)
+    name.split(" ").map(&:capitalize).join(" ")
   end
 
   def find_or_create_node(object)
