@@ -18,14 +18,6 @@ class EtsyController < ApplicationController
     @path = actor ? @graph_maker.bacon_path(actor) : nil
   end
 
-  def actors
-    if params[:query].present?
-      @actors = Actor.search(params[:query], page: params[:page])
-    else
-      @actors = cast_of_frost_nixon
-    end
-  end
-
   def autocomplete
     render json: Actor.search(params[:query], 
       autocomplete: true, limit: 10).map(&:name)
