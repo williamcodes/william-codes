@@ -1,1 +1,2 @@
 [![Code Climate](https://codeclimate.com/github/williamcodes/william-codes.png)](https://codeclimate.com/github/williamcodes/william-codes)
+[![Code Climate](https://codeclimate.com/github/williamcodes/william-codes/coverage.png)](https://codeclimate.com/github/williamcodes/william-codes)
