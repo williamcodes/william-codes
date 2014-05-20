@@ -7,8 +7,10 @@ gem 'neography'
 gem 'font-awesome-rails'
 gem 'capistrano', '2.15.5'
 
-gem 'simplecov', :require => false, :group => :test
-gem "codeclimate-test-reporter", group: :test, require: nil
+group :test do
+  gem 'simplecov'
+  gem "codeclimate-test-reporter"
+end
 
 group :development, :test do 
   gem 'pry-nav'
