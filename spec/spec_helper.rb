@@ -4,10 +4,10 @@ require File.expand_path("../../config/environment", __FILE__)
 
 require 'rspec/rails'
 require 'rspec/autorun'
-require 'simplecov'
-require "codeclimate-test-reporter"
 
+require "codeclimate-test-reporter"
 CodeClimate::TestReporter.start
+require 'simplecov'
 SimpleCov.start 'rails'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
