@@ -17,4 +17,10 @@ describe Actor do
       expect(kyra.bacon?).to eq false
     end
   end
+
+  context '#.kevin_bacon' do
+    it "returns Kevin Bacon" do
+      expect(Actor.kevin_bacon.name).to eq "Kevin Bacon"
+    end
+  end
 end
