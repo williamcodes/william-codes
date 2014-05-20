@@ -9,7 +9,7 @@ gem 'capistrano', '2.15.5'
 
 group :test do
   gem 'simplecov'
-  gem "codeclimate-test-reporter"
+  gem 'codeclimate-test-reporter'
 end
 
 group :development, :test do 
